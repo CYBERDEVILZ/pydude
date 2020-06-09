@@ -20,10 +20,24 @@ Its just a simple game with no levels as of now (but just the level zero). In th
 
 The source code for the game can be downloaded from this github repository. Anyone is free to make changes to it. Obviously bugs will be there but I will try to fix them up as soon as possible.
 
-## How to download
+## How to download and configure
 
-Download this repository and save it in "C:/Program Files". You are good to go.
+Follow these steps carefully to ensure safe installation:
 
+### Pygame must be installed
 
-####Remember! Python must be installed on your desktop####
+If you dont have pygame, go to cmd and type in the following command:
+*pip install pygame*
+then press enter
 
+### Download the game from this repository
+
+The file *pydude-master.zip* will be downloaded. Extract it. hen copy and save the folder called *pydude* in *C:/Program Files*
+
+### Open pydude.py and enjoy
+
+if you have python saved to PATH, you can just double click on the pydude.py to start the game. Else, open cmd in the directory of *pydude* and type in the following command:
+
+*python pydude.py*
+
+If you have two versions of python installed to path, please mention the version of python before pyudude.py
