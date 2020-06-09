@@ -8,34 +8,32 @@ pygame.display.set_caption("PYDUDE")
 clock  = pygame.time.Clock()
 
 ## moving left
-leftmove = [pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_1.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_2.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_3.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_4.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_5.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_6.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_7.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_8.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_9.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small_10.png')]
+leftmove = [pygame.image.load('C:/Program Files/pydude/movement/small_1.png'), pygame.image.load('C:/Program Files/pydude/movement/small_2.png'), pygame.image.load('C:/Program Files/pydude/movement/small_3.png'), pygame.image.load('C:/Program Files/pydude/movement/small_4.png'), pygame.image.load('C:/Program Files/pydude/movement/small_5.png'), pygame.image.load('C:/Program Files/pydude/movement/small_6.png'), pygame.image.load('C:/Program Files/pydude/movement/small_7.png'), pygame.image.load('C:/Program Files/pydude/movement/small_8.png'), pygame.image.load('C:/Program Files/pydude/movement/small_9.png'), pygame.image.load('C:/Program Files/pydude/movement/small_10.png')]
 
 ## moving right
-rightmove = [pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 1.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 2.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 3.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 4.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 5.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 6.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 7.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 8.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 9.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/small 10.png')]
-
-#jump_right = [pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/rest_r.png'),pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j1_r.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j2_r.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j3_r.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/jpeak_r.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j3__r.png'), pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j2__r.png')]
+rightmove = [pygame.image.load('C:/Program Files/pydude/movement/small 1.png'), pygame.image.load('C:/Program Files/pydude/movement/small 2.png'), pygame.image.load('C:/Program Files/pydude/movement/small 3.png'), pygame.image.load('C:/Program Files/pydude/movement/small 4.png'), pygame.image.load('C:/Program Files/pydude/movement/small 5.png'), pygame.image.load('C:/Program Files/pydude/movement/small 6.png'), pygame.image.load('C:/Program Files/pydude/movement/small 7.png'), pygame.image.load('C:/Program Files/pydude/movement/small 8.png'), pygame.image.load('C:/Program Files/pydude/movement/small 9.png'), pygame.image.load('C:/Program Files/pydude/movement/small 10.png')]
 
 ## background image
-bg = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/bgsprite.jpg')
+bg = pygame.image.load('C:/Program Files/pydude/background_image/bgsprite.jpg')
 
 ## rest image***************************** to be debugged *******************
-char_r = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/rest_r.png')
-char_l = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/rest_l.png')
+char_r = pygame.image.load('C:/Program Files/pydude/movement/rest_r.png')
+char_l = pygame.image.load('C:/Program Files/pydude/movement/rest_l.png')
 ## jumping right
-j1_r = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j1_r.png')
-j2_r = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j2_r.png')
-j3_r = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j3_r.png')
-jpeak_r = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/jpeak_r.png')
-j3__r = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j3__r.png')
-j2__r = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j2__r.png')
+j1_r = pygame.image.load('C:/Program Files/pydude/movement/j1_r.png')
+j2_r = pygame.image.load('C:/Program Files/pydude/movement/j2_r.png')
+j3_r = pygame.image.load('C:/Program Files/pydude/movement/j3_r.png')
+jpeak_r = pygame.image.load('C:/Program Files/pydude/movement/jpeak_r.png')
+j3__r = pygame.image.load('C:/Program Files/pydude/movement/j3__r.png')
+j2__r = pygame.image.load('C:/Program Files/pydude/movement/j2__r.png')
 
 ### jumping left
-j1_l = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j1_l.png')
-j2_l = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j2_l.png')
-j3_l = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j3_l.png')
-jpeak_l = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/jpeak_l.png')
-j3__l = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j3__l.png')
-j2__l = pygame.image.load('c:/Users/PRANAV U/Desktop/PYTHON PROJECTS/python_games/j2__l.png')
+j1_l = pygame.image.load('C:/Program Files/pydude/movement/j1_l.png')
+j2_l = pygame.image.load('C:/Program Files/pydude/movement/j2_l.png')
+j3_l = pygame.image.load('C:/Program Files/pydude/movement/j3_l.png')
+jpeak_l = pygame.image.load('C:/Program Files/pydude/movement/jpeak_l.png')
+j3__l = pygame.image.load('C:/Program Files/pydude/movement/j3__l.png')
+j2__l = pygame.image.load('C:/Program Files/pydude/movement/j2__l.png')
 
 
 
@@ -122,16 +120,6 @@ class Player():
         
         ####  one time space bar initialisation
         if not self.isjump_r and not self.isjump_l:
-                                #if keys[pygame.K_DOWN]:
-                                #   if self.y<=screen_height-50:
-                                #      self.y+=self.vel
-                                # if self.y>screen_height-50:
-                                    #    self.y=screen_height-50
-                                #if keys[pygame.K_UP]:
-                                #   if self.y>=0:
-                                #      self.y-=self.vel
-                                # if self.y<0:
-                                    #    self.y=0
             if keys[pygame.K_SPACE] and keys[pygame.K_RIGHT]:                              #### returns 1
                 self.isjump_r = True
             if keys[pygame.K_SPACE] and keys[pygame.K_LEFT]:                              #### returns 1
