@@ -40,4 +40,4 @@ if you have python saved to PATH, you can just double click on the pydude.py to 
 
 *python pydude.py*
 
-If you have two versions of python installed to path, please mention the version of python before pyudude.py
+{If you have two versions of python installed to path, please mention the version}
