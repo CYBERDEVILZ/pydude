@@ -48,5 +48,5 @@ Python  (https://www.python.org/)
 Pygame  (https://www.pygame.org)
 
 ### Feel free to contact me for any suggestions, collaboration or just for friends:
-#### Instagram:    _.m_a_s_k_e_d_m_a_n._
-#### LinkedIn:     Pranav U
+#### Instagram:    https://www.instagram.com/_.m_a_s_k_e_d_m_a_n._/
+#### LinkedIn:     https://www.linkedin.com/in/pranav-u-6bb3181ab/
