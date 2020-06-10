@@ -41,3 +41,12 @@ if you have python saved to PATH, you can just double click on the pydude.py to 
 *python pydude.py*
 
 {If you have two versions of python installed to path, please mention the version}
+
+## Developed using:
+
+Python  (https://www.python.org/)
+Pygame  (https://www.pygame.org)
+
+### Feel free to contact me for any suggestions, collaboration or just for friends:
+#### Instagram:    _.m_a_s_k_e_d_m_a_n._
+#### LinkedIn:     Pranav U
