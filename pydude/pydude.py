@@ -1,4 +1,5 @@
 import pygame
+import os
 pygame.init()
 
 screen_width = 1000
@@ -8,32 +9,32 @@ pygame.display.set_caption("PYDUDE")
 clock  = pygame.time.Clock()
 
 ## moving left
-leftmove = [pygame.image.load('C:/Program Files/pydude/movement/small_1.png'), pygame.image.load('C:/Program Files/pydude/movement/small_2.png'), pygame.image.load('C:/Program Files/pydude/movement/small_3.png'), pygame.image.load('C:/Program Files/pydude/movement/small_4.png'), pygame.image.load('C:/Program Files/pydude/movement/small_5.png'), pygame.image.load('C:/Program Files/pydude/movement/small_6.png'), pygame.image.load('C:/Program Files/pydude/movement/small_7.png'), pygame.image.load('C:/Program Files/pydude/movement/small_8.png'), pygame.image.load('C:/Program Files/pydude/movement/small_9.png'), pygame.image.load('C:/Program Files/pydude/movement/small_10.png')]
+leftmove = [pygame.image.load(os.getcwd()+'/movement/small_1.png'), pygame.image.load(os.getcwd()+'/movement/small_2.png'), pygame.image.load(os.getcwd()+'/movement/small_3.png'), pygame.image.load(os.getcwd()+'/movement/small_4.png'), pygame.image.load(os.getcwd()+'/movement/small_5.png'), pygame.image.load(os.getcwd()+'/movement/small_6.png'), pygame.image.load(os.getcwd()+'/movement/small_7.png'), pygame.image.load(os.getcwd()+'/movement/small_8.png'), pygame.image.load(os.getcwd()+'/movement/small_9.png'), pygame.image.load(os.getcwd()+'/movement/small_10.png')]
 
 ## moving right
-rightmove = [pygame.image.load('C:/Program Files/pydude/movement/small 1.png'), pygame.image.load('C:/Program Files/pydude/movement/small 2.png'), pygame.image.load('C:/Program Files/pydude/movement/small 3.png'), pygame.image.load('C:/Program Files/pydude/movement/small 4.png'), pygame.image.load('C:/Program Files/pydude/movement/small 5.png'), pygame.image.load('C:/Program Files/pydude/movement/small 6.png'), pygame.image.load('C:/Program Files/pydude/movement/small 7.png'), pygame.image.load('C:/Program Files/pydude/movement/small 8.png'), pygame.image.load('C:/Program Files/pydude/movement/small 9.png'), pygame.image.load('C:/Program Files/pydude/movement/small 10.png')]
+rightmove = [pygame.image.load(os.getcwd()+'/movement/small 1.png'), pygame.image.load(os.getcwd()+'/movement/small 2.png'), pygame.image.load(os.getcwd()+'/movement/small 3.png'), pygame.image.load(os.getcwd()+'/movement/small 4.png'), pygame.image.load(os.getcwd()+'/movement/small 5.png'), pygame.image.load(os.getcwd()+'/movement/small 6.png'), pygame.image.load(os.getcwd()+'/movement/small 7.png'), pygame.image.load(os.getcwd()+'/movement/small 8.png'), pygame.image.load(os.getcwd()+'/movement/small 9.png'), pygame.image.load(os.getcwd()+'/movement/small 10.png')]
 
 ## background image
-bg = pygame.image.load('C:/Program Files/pydude/background_image/bgsprite.jpg')
+bg = pygame.image.load(os.getcwd()+'/background_image/bgsprite.jpg')
 
 ## rest image***************************** to be debugged *******************
-char_r = pygame.image.load('C:/Program Files/pydude/movement/rest_r.png')
-char_l = pygame.image.load('C:/Program Files/pydude/movement/rest_l.png')
+char_r = pygame.image.load(os.getcwd()+'/movement/rest_r.png')
+char_l = pygame.image.load(os.getcwd()+'/movement/rest_l.png')
 ## jumping right
-j1_r = pygame.image.load('C:/Program Files/pydude/movement/j1_r.png')
-j2_r = pygame.image.load('C:/Program Files/pydude/movement/j2_r.png')
-j3_r = pygame.image.load('C:/Program Files/pydude/movement/j3_r.png')
-jpeak_r = pygame.image.load('C:/Program Files/pydude/movement/jpeak_r.png')
-j3__r = pygame.image.load('C:/Program Files/pydude/movement/j3__r.png')
-j2__r = pygame.image.load('C:/Program Files/pydude/movement/j2__r.png')
+j1_r = pygame.image.load(os.getcwd()+'/movement/j1_r.png')
+j2_r = pygame.image.load(os.getcwd()+'/movement/j2_r.png')
+j3_r = pygame.image.load(os.getcwd()+'/movement/j3_r.png')
+jpeak_r = pygame.image.load(os.getcwd()+'/movement/jpeak_r.png')
+j3__r = pygame.image.load(os.getcwd()+'/movement/j3__r.png')
+j2__r = pygame.image.load(os.getcwd()+'/movement/j2__r.png')
 
 ### jumping left
-j1_l = pygame.image.load('C:/Program Files/pydude/movement/j1_l.png')
-j2_l = pygame.image.load('C:/Program Files/pydude/movement/j2_l.png')
-j3_l = pygame.image.load('C:/Program Files/pydude/movement/j3_l.png')
-jpeak_l = pygame.image.load('C:/Program Files/pydude/movement/jpeak_l.png')
-j3__l = pygame.image.load('C:/Program Files/pydude/movement/j3__l.png')
-j2__l = pygame.image.load('C:/Program Files/pydude/movement/j2__l.png')
+j1_l = pygame.image.load(os.getcwd()+'/movement/j1_l.png')
+j2_l = pygame.image.load(os.getcwd()+'/movement/j2_l.png')
+j3_l = pygame.image.load(os.getcwd()+'/movement/j3_l.png')
+jpeak_l = pygame.image.load(os.getcwd()+'/movement/jpeak_l.png')
+j3__l = pygame.image.load(os.getcwd()+'/movement/j3__l.png')
+j2__l = pygame.image.load(os.getcwd()+'/movement/j2__l.png')
 
 
 
@@ -49,7 +50,7 @@ class Player():
         self.vel = 10
         self.jc = 10
         self.isjump = 0 ## one time space bar initializer
-        self.isleft = False ## char_rest detoggler  
+        self.isleft = False ## char_rest detoggler
         self.isright = False ## char_rest detoggler
         self.Walkcount = 0
         self.jumpcount = 0
@@ -57,7 +58,7 @@ class Player():
         self.isjump_l = False
         self.walkleft = True ## toggles only the walk left move
         self.walkright = True ## toggles only the walk right move
-        self.walkr = 1 ## char face direction (initially right) 
+        self.walkr = 1 ## char face direction (initially right)
         self.walkl = 0 ## char face direction
         self.lt = True
         self.rt = True
@@ -69,7 +70,7 @@ class Player():
         ### if character is not moving and jumping and is facing left
         if not self.isleft and not self.isright and not self.isjump_l and self.walkl and not self.isjump:
             win.blit(char_l, (self.x, self.y))
-        
+
 
     def move(self, win):
         keys = pygame.key.get_pressed()
@@ -114,17 +115,17 @@ class Player():
                     self.x+=self.vel
                 if self.x>=screen_width-50:
                     self.x=screen_width-50
-            else: 
+            else:
                 self.walkleft = True
-        
-        
+
+
         ####  one time space bar initialisation
         if not self.isjump_r and not self.isjump_l:
             if keys[pygame.K_SPACE] and keys[pygame.K_RIGHT]:                              #### returns 1
                 self.isjump_r = True
             if keys[pygame.K_SPACE] and keys[pygame.K_LEFT]:                              #### returns 1
                 self.isjump_l = True
-            
+
 
 
         ####  jumping and moving right
@@ -146,31 +147,31 @@ class Player():
                         win.blit(j1_r, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j1_r, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_r, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_r, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_r, (self.x, self.y))
                     else:
                         self.isleft = False
@@ -193,40 +194,40 @@ class Player():
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_r, (self.x, self.y))
                     else:
                         self.isleft = False
                         self.isleft = False
-                        
-                    
+
+
                 self.jc-=1
-            
-            
+
+
             else:                           ##reached the ground, resetting values
                 self.jc = 10
                 self.isjump_r = False
@@ -253,31 +254,31 @@ class Player():
                         win.blit(j1_l, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j1_l, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_l, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_l, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_l, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_l, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_l, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_l, (self.x, self.y))
                     else:
                         self.isleft = False
@@ -300,39 +301,39 @@ class Player():
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_l, (self.x, self.y))
                     else:
                         self.isleft = False
                         self.isleft = False
-                    
+
                 self.jc-=1
-            
-            
+
+
             else:                           ##reached the ground, resetting values
                 self.jc = 10
                 self.isjump_l = False
@@ -369,31 +370,31 @@ class Player():
                         win.blit(j1_r, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j1_r, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_r, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_r, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_r, (self.x, self.y))
                     else:
                         self.isleft = False
@@ -416,40 +417,40 @@ class Player():
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__r, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_r, (self.x, self.y))
                     else:
                         self.isleft = False
                         self.isleft = False
-                        
-                    
+
+
                 self.jc-=1
-            
-            
+
+
             else:                           ##reached the ground, resetting values
                 self.jc = 10
                 self.isjump = 0
@@ -478,31 +479,31 @@ class Player():
                         win.blit(j1_r, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j1_r, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_l, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j2_r, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_l, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3_l, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_l, (self.x, self.y))
                     else:
                         self.isleft = False
@@ -525,47 +526,47 @@ class Player():
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 233.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 214.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 200.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 190.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 184.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 181.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(j3__l, (self.x, self.y))
                     if self.y == 180.0:
                         self.isright = True
-                        self.isleft = True                        
+                        self.isleft = True
                         win.blit(jpeak_l, (self.x, self.y))
                     else:
                         self.isleft = False
                         self.isright = False
-                        
-                    
+
+
                 self.jc-=1
-            
-            
+
+
             else:                           ##reached the ground, resetting values
                 self.jc = 10
                 self.isjump = 0
                 self.walkleft = True
                 self.walkright = True
                 self.rt = True
-        
+
 
 
 
@@ -574,12 +575,12 @@ class Player():
             self.isleft = False
             self.isright = False
 
-        
 
-                
 
-#########################  MAIN GAME LOOP  ##############################        
-      
+
+
+#########################  MAIN GAME LOOP  ##############################
+
 x = Player(50, 330, 50, 50, (255, 0, 0))
 run = True
 while run:
@@ -588,9 +589,9 @@ while run:
     x.move(win)
     x.draw(win)
     pygame.display.update()
-    
+
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
             run=False
-    
+
 pygame.quit()
