@@ -32,7 +32,7 @@ then press enter
 
 ### Download the game from this repository
 
-The file *pydude-master.zip* will be downloaded. Extract it. hen copy and save the folder called *pydude* in *C:/Program Files*
+The file *pydude-master.zip* will be downloaded. Extract it. As of now, it runs only on linux. I will try to make it platform independent as soon as possible.
 
 ### Open pydude.py and enjoy
 
